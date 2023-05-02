@@ -1,12 +1,26 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import './Home.css';
+import ChefData from './Home/ChefData';
+
+
+
 
 const Home = () => {
-    const data = useLoaderData();
-    console.log(data)
+    const chefData = useLoaderData();
+    console.log(chefData)
     return (
         <div>
-            <h1>hello</h1>
+            <div className='mt-5'>
+                {
+                    chefData.map(data => <ChefData
+                    key = {data.id} 
+                    recipeInfo={data}></ChefData>
+
+                    )
+                }
+            </div>
+
         </div>
     );
 };
