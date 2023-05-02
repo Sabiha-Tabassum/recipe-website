@@ -2,10 +2,11 @@ import React from 'react';
 import { Button, Card, Container, } from 'react-bootstrap';
 import './chefData.css';
 import { FaThumbsUp } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const ChefData = ({ recipeInfo }) => {
     console.log(recipeInfo)
-    const { chef_name, likes, number_of_recipes, picture, years_of_experience } = recipeInfo
+    const {id, chef_name, likes, number_of_recipes, picture, years_of_experience } = recipeInfo
     return (
         <Container className='mb-2 '>
 
@@ -18,7 +19,7 @@ const ChefData = ({ recipeInfo }) => {
                     <div className='d-flex'>
                         <p className='flex-grow-1'><FaThumbsUp />  {likes}</p>
 
-                        <Button variant="light" className='text-danger'>View Recipes</Button>
+                       <Link to={`/recipes/${id}`}><Button variant="light" className='text-danger'>View Recipes</Button></Link> 
                     </div>
 
                 </Card.Body>

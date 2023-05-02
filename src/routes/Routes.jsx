@@ -3,6 +3,9 @@ import Main from "../Layouts/Main/Main";
 import Home from "../Pages/Home/Home";
 import ErrorPage from "../ErrorPage/ErrorPage";
 
+import RecipePage from "../Layouts/RecipePage/RecipePage";
+import Recipes from "../Pages/Recipes/Recipes";
+
 const router = createBrowserRouter([
       {
         path: '/',
@@ -17,6 +20,18 @@ const router = createBrowserRouter([
                 
             },
         ]
+      },
+
+      {
+         path: 'recipes',
+         element: <RecipePage></RecipePage>,
+         children: [
+            {
+                path: ':id',
+                element: <Recipes></Recipes>,
+                loader: ({params}) => fetch(`http://localhost:5000/chefData/${params.id}`)
+            }
+         ]
       }
 ])
 
