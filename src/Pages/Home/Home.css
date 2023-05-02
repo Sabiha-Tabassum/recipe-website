@@ -1,0 +1,21 @@
+.bg{
+    background-image: url(/src/image/recipe.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+    position: relative;
+}
+
+.bg-text{
+    position: absolute;
+    top: 250px;
+    left: 20px;
+}
+
+.title{
+   
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    
+}
