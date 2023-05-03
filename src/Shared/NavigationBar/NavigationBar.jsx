@@ -2,8 +2,11 @@ import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import './NavigationBar.css';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const NavigationBar = () => {
+     const {user} = useContext(AuthContext);
     return (
         <Container className=' mt-2'>
 
@@ -18,10 +21,22 @@ const NavigationBar = () => {
 
                         </Nav>
                         <Nav>
-                            <Nav.Link href="#deets" className='mt-2'>profile</Nav.Link>
-                            <Nav.Link eventKey={2} href="#memes" >
-                                <Button variant="dark">LogIn</Button>
-                            </Nav.Link>
+                           {
+                            user &&  <Link href="#deets" className='mt-2 me-4'>
+                                {user.displayName}
+                            </Link>
+                           }
+
+                           
+
+                               {
+                                user ?  <Button variant="dark">LogOut</Button> :
+                                 <Link to="/login">
+                                     <Button variant="dark">LogIn</Button>
+                                 </Link>
+                               }
+
+                           
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

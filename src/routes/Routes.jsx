@@ -7,6 +7,9 @@ import RecipePage from "../Layouts/RecipePage/RecipePage";
 import Recipes from "../Pages/Recipes/Recipes";
 import Blog from "../Pages/Blog/Blog";
 
+import Login from "../Pages/Login/Login";
+import Register from "../Pages/Register/Register";
+
 const router = createBrowserRouter([
       {
         path: '/',
@@ -28,8 +31,15 @@ const router = createBrowserRouter([
 
             {
                 path: 'login',
-                
+                element: <Login></Login>
+            },
+
+            {
+                path: 'register',
+                element: <Register></Register>
             }
+
+            
         ]
       },
 
@@ -43,7 +53,11 @@ const router = createBrowserRouter([
                 loader: ({params}) => fetch(`http://localhost:5000/chefData/${params.id}`)
             }
          ]
-      }
+      },
+
+      
+
+      
 ])
 
 export default router;
