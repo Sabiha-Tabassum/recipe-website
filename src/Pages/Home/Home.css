@@ -1,14 +1,14 @@
 .bg{
-    background-image: url(/src/image/recipe.jpg);
+    background-image: url(/src/image/chef-recipe.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 550px;
+    height: 500px;
     position: relative;
 }
 
 .bg-text{
     position: absolute;
-    top: 250px;
+    top: 240px;
     left: 20px;
 }
 
@@ -17,6 +17,12 @@
     position: absolute;
     top: 80px;
     left: 20px;
+    
+}
+
+.chef-card{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     
 }
 

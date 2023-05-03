@@ -19,7 +19,7 @@ const Home = () => {
             <div className='text-center my-5'>
                 <h2>Meet With Our Talented Head Chefs</h2>
             </div>
-            <div className='mt-5 '>
+            <div className='mt-5 chef-card'>
                 {
                     chefData.map(data => <ChefData
                         key={data.id}
@@ -27,6 +27,12 @@ const Home = () => {
 
                     )
                 }
+            </div>
+
+            <div className='text-center my-5'>
+                <h2>
+                    Trending This Week
+                </h2>
             </div>
 
             <Carousel className='mt-4'>

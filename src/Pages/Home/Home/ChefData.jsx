@@ -10,7 +10,7 @@ const ChefData = ({ recipeInfo }) => {
     return (
         <Container className='mb-2'>
 
-            <Card style={{ width: '50rem' }}>
+            <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={picture} />
                 <Card.Body>
                     <Card.Title>{chef_name}</Card.Title>
