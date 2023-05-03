@@ -32,6 +32,10 @@ const Recipes = () => {
 
             </div>
 
+            <div className='text-center my-5'>
+                <h2> Chef's recipes are given below</h2>
+            </div>
+
             <div>
                 <Card style={{ width: '50rem' }} className='card my-4'>
                     <Card.Body>
@@ -42,9 +46,9 @@ const Recipes = () => {
                                 ingredients1.map(ingredient => <li>{ingredient}</li>)
                             }
                         </Card.Text>
-                        <Card.Text>
+                        <div>
                             <h6>Cooking Method: <small>{cooking_method1}</small></h6>
-                        </Card.Text>
+                        </div>
                         <div className='d-flex'>
                             <div className='flex-grow-1'>
                                 <Button onClick={handleFavouriteButton} variant="secondary"><FaHeart></FaHeart></Button>
@@ -75,9 +79,9 @@ const Recipes = () => {
                                 ingredients2.map(ingredient => <li>{ingredient}</li>)
                             }
                         </Card.Text>
-                        <Card.Text>
+                        <div>
                             <h6>Cooking Method: <small>{cooking_method2}</small></h6>
-                        </Card.Text>
+                        </div>
                         <div className='d-flex'>
                             <div className='flex-grow-1'>
                                 <Button onClick={handleFavouriteButton} variant="secondary"><FaHeart></FaHeart></Button>
@@ -107,9 +111,9 @@ const Recipes = () => {
                                 ingredients3.map(ingredient => <li>{ingredient}</li>)
                             }
                         </Card.Text>
-                        <Card.Text>
+                        <div>
                             <h6>Cooking Method: <small>{cooking_method3}</small></h6>
-                        </Card.Text>
+                        </div>
                         <div className='d-flex'>
                             <div className='flex-grow-1'>
                                 <Button onClick={handleFavouriteButton} variant="secondary"><FaHeart></FaHeart></Button>

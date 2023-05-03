@@ -1,0 +1,6 @@
+.footer-banner{
+    background-image: url(/src/image/footer-banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 340px;
+}
