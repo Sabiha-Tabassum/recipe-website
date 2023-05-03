@@ -5,6 +5,7 @@ import ErrorPage from "../ErrorPage/ErrorPage";
 
 import RecipePage from "../Layouts/RecipePage/RecipePage";
 import Recipes from "../Pages/Recipes/Recipes";
+import Blog from "../Pages/Blog/Blog";
 
 const router = createBrowserRouter([
       {
@@ -19,6 +20,16 @@ const router = createBrowserRouter([
                 
                 
             },
+
+            {
+                path: 'blog',
+                element: <Blog></Blog>
+            },
+
+            {
+                path: 'login',
+                
+            }
         ]
       },
 
