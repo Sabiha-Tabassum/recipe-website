@@ -18,7 +18,7 @@ const NavigationBar = () => {
     return (
         <Container className=' mt-2'>
 
-            <Navbar collapseOnSelect expand="lg" >
+            <Navbar collapseOnSelect expand="lg" bg="light" variant="light" >
                 <Container className=''>
                     <Navbar.Brand href="#home" className=''>Chinese Recipes</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />

@@ -50,7 +50,7 @@ const Register = () => {
 
             })
 
-
+           
 
     }
 
@@ -58,7 +58,7 @@ const Register = () => {
 
     return (
         <div>
-            <Container className='w-25 mx-auto mb-5'>
+            <Container className='w-25 mx-auto mb-5 mt-4 mb-4 border border-secondary-subtle'>
                 <h4>Please Register</h4>
                 <Form onSubmit={handleRegister}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -85,7 +85,7 @@ const Register = () => {
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
                         <Form.Check type="checkbox" name='accept' label="Accept terms and conditions" />
                     </Form.Group>
-                    <Button variant="primary" type="submit">
+                    <Button variant="dark" type="submit">
                         Register
                     </Button>
                     <br />
