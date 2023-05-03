@@ -8,7 +8,7 @@ import { AuthContext } from '../../Provider/AuthProvider';
 
 const Register = () => {
 
-    const { createUser } = useContext(AuthContext);
+    const { createUser, updateProfile } = useContext(AuthContext);
 
     const [error, setError] = useState('');
    
@@ -50,6 +50,8 @@ const Register = () => {
 
             })
 
+            updateProfile()
+
            
 
     }
@@ -82,9 +84,7 @@ const Register = () => {
                         <Form.Label>Password</Form.Label>
                         <Form.Control type="password" name="password" placeholder="Password" required />
                     </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                        <Form.Check type="checkbox" name='accept' label="Accept terms and conditions" />
-                    </Form.Group>
+                   
                     <Button variant="dark" type="submit">
                         Register
                     </Button>

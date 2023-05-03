@@ -22,6 +22,22 @@ const AuthProvider = ({children}) => {
    } 
 
 
+   const updateProfile = ( photo) => {
+    if (user) {
+      user.updateProfile({
+        photo
+
+      })
+      .then(() => {
+        console.log('Profile updated successfully!');
+      })
+      .catch((error) => {
+        console.error('Error updating profile:', error);
+      });
+    }
+  };
+
+
    const signIn = (email, password) => {
       setLoading(true);
       return signInWithEmailAndPassword(auth,email,password);
@@ -57,7 +73,7 @@ const AuthProvider = ({children}) => {
    },[])
 
 
-    const authInfo = {user, createUser, signIn, logOut, loading, popUpSignIn, gitHubSignIn,}
+    const authInfo = {user, createUser, signIn, logOut, loading, popUpSignIn, gitHubSignIn, updateProfile}
 
     return (
         <AuthContext.Provider value={authInfo}>

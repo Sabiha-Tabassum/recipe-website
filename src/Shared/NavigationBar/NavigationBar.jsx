@@ -1,18 +1,18 @@
 import React from 'react';
-import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Image, Nav, Navbar } from 'react-bootstrap';
 import './NavigationBar.css';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 
 const NavigationBar = () => {
-     const {user, logOut} = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
 
-     const handleLogOut = () =>{
+    const handleLogOut = () => {
         logOut()
-        .then()
-        .catch(error => console.log(error));
-     }
+            .then()
+            .catch(error => console.log(error));
+    }
 
 
     return (
@@ -23,33 +23,65 @@ const NavigationBar = () => {
                     <Navbar.Brand href="#home" className=''>Chinese Recipes</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="mx-auto">
-                            <Link to='/' className=' mt-2 me-2'>Home</Link>
-                            <Link to='/blog' className='mt-2 '>Blog</Link>
+                        <Nav className="mx-auto ">
+                            <ul className='d-flex mt-5'>
+                                <p className='me-2'>
+                                    <NavLink
+                                        to='/'
+                                        aria-label='Home'
+                                        title='Home'
+                                        className={({ isActive }) => (isActive ? 'active' : 'default')}
+                                    >
+                                        Home
+                                    </NavLink>
+                                </p>
+                                <p>
+                                    <NavLink
+                                        to='/blog'
+                                        aria-label='Blog'
+                                        title='Blog'
+                                        className={({ isActive }) => (isActive ? 'active' : 'default')}
+                                    >
+                                        Blog
+                                    </NavLink>
+                                </p>
+
+                            </ul>
+
+                            {/* <Link to='/' className=' mt-2 me-2'>Home</Link>
+                            <Link to='/blog' className='mt-2 '>Blog</Link> */}
 
                         </Nav>
                         <Nav>
-                           {
-                            user &&  <Link href="#deets" className='mt-2 me-4'>
-                                {user.displayName}
-                            </Link>
-                           }
+                            {
+                                user && <div className='d-flex'>
+                                    <div className='me-2'>
+                                        <Image style={{ height: '40px' }} src={user.photoURL} roundedCircle />
+                                    </div>
 
-                           
+                                    <div className='mt-2 me-4'>
+                                        <p> {user.displayName}</p>
+                                    </div>
 
-                               {
-                                user ?  <Button onClick={handleLogOut} variant="dark">LogOut</Button> :
-                                 <Link to="/login">
-                                     <Button variant="dark">LogIn</Button>
-                                 </Link>
-                               }
 
-                           
+                                </div>
+                            }
+
+
+
+                            {
+                                user ? <Button onClick={handleLogOut} variant="dark">LogOut</Button> :
+                                    <Link to="/login">
+                                        <Button variant="dark">LogIn</Button>
+                                    </Link>
+                            }
+
+
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-            
+
         </Container>
 
 
