@@ -1,7 +1,9 @@
 import React from 'react';
 import { Button, Card, Container } from 'react-bootstrap';
 import { FaHeart, FaRegStar, FaStar } from 'react-icons/fa';
-import Rating from 'react-rating';
+import { Rating } from '@smastrom/react-rating'
+
+import '@smastrom/react-rating/style.css'
 import { useLoaderData } from 'react-router-dom';
 import './Recipes.css';
 import { ToastContainer, toast } from 'react-toastify';
@@ -56,7 +58,7 @@ const Recipes = () => {
                     delay: 60,
                     strings: ["<h2> Chef's recipes are given below</h2>"]
                 }}></TypewriterComponent>
-                
+
             </div>
 
             <div>
@@ -78,16 +80,10 @@ const Recipes = () => {
                                     disabled={click1} variant="secondary">Favourite <FaHeart></FaHeart></Button>
                             </div>
 
-                            <div>
-                                <Rating
-                                    placeholderRating={rating1}
-                                    readonly
-                                    emptySymbol={<FaRegStar></FaRegStar>}
-                                    placeholderSymbol={<FaStar></FaStar>}
-                                    fullSymbol={<FaStar></FaStar>}>
+                            <div className='d-flex align-items-center'>
 
-                                </Rating>
-                                <span>{rating1}</span>
+                                <Rating style={{ maxWidth: 100 }} value={rating1} readOnly /><span>{rating1}</span>
+                                
 
                             </div>
                         </div>
@@ -111,16 +107,12 @@ const Recipes = () => {
                                 <Button onClick={handleFavouriteButton2}
                                     disabled={click2} variant="secondary">Favourite <FaHeart></FaHeart></Button>
                             </div>
-                            <div>
-                                <Rating
-                                    placeholderRating={rating2}
-                                    readonly
-                                    emptySymbol={<FaRegStar></FaRegStar>}
-                                    placeholderSymbol={<FaStar></FaStar>}
-                                    fullSymbol={<FaStar></FaStar>}>
+                            <div className='d-flex align-items-center'>
 
-                                </Rating>
-                                <span>{rating2}</span>
+
+                            <Rating style={{ maxWidth: 100 }} value={rating2} readOnly /><span>{rating2}</span>
+                               
+                                
 
                             </div>
                         </div>
@@ -145,16 +137,12 @@ const Recipes = () => {
                                     disabled={click3} variant="secondary">Favourite <FaHeart></FaHeart></Button>
                             </div>
                             <ToastContainer />
-                            <div>
-                                <Rating
-                                    placeholderRating={rating3}
-                                    readonly
-                                    emptySymbol={<FaRegStar></FaRegStar>}
-                                    placeholderSymbol={<FaStar></FaStar>}
-                                    fullSymbol={<FaStar></FaStar>}>
+                            <div className='d-flex align-items-center'>
 
-                                </Rating>
-                                <span>{rating3}</span>
+
+                            <Rating style={{ maxWidth: 100 }} value={rating3} readOnly /><span>{rating3}</span>
+                                
+                                
 
                             </div>
                         </div>
