@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactToPrint from 'react-to-print';
-import { Container } from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
 import { useRef } from 'react';
 
 const Blog = () => {
@@ -19,7 +19,7 @@ const Blog = () => {
                 <p className='m-4'>In React, a custom hook is a JavaScript function that uses one or more of the built-in hooks (such as useState, useEffect, or useContext) to provide some reusable behavior or functionality to a component. <br />  custom hooks are useful for creating reusable functionality and logic that can be shared across multiple components. </p>
             </div>
             <div className='text-center m-4'>
-                <ReactToPrint trigger={() => <button className='px-5 py-2'>Print</button>} content={()=>ref.current}></ReactToPrint>
+                <ReactToPrint trigger={() => <Button variant="secondary" className='px-5 py-2 text-white'>Print</Button>} content={()=>ref.current}></ReactToPrint>
             </div>
         </Container>
     );

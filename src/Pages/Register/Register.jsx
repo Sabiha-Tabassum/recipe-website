@@ -11,10 +11,10 @@ const Register = () => {
     const { createUser, updateProfile } = useContext(AuthContext);
 
     const [error, setError] = useState('');
-   
+
     const handleRegister = event => {
         event.preventDefault();
-         
+
         const form = event.target;
         const name = form.name.value;
         const email = form.email.value;
@@ -23,16 +23,16 @@ const Register = () => {
 
         console.log(name, email, photo, password);
 
-      
+
 
         // validation:        
 
-        if(password.length < 6){
+        if (password.length < 6) {
             setError('Please add at least 6 characters in your password')
             return;
-         }
+        }
 
-     
+
 
         createUser(email, password)
             .then(result => {
@@ -40,19 +40,19 @@ const Register = () => {
                 console.log(createdUser);
                 setError('');
                 event.target.reset();
-                
+
             })
 
             .catch(error => {
                 console.error(error.message);
                 setError(error.message);
-                
+
 
             })
 
-            updateProfile()
+        updateProfile()
 
-           
+
 
     }
 
@@ -84,12 +84,12 @@ const Register = () => {
                         <Form.Label>Password</Form.Label>
                         <Form.Control type="password" name="password" placeholder="Password" required />
                     </Form.Group>
-                   
-                    <Button variant="dark" type="submit">
-                        Register
-                    </Button>
-                    <br />
-                    
+                    <div className='text-center'>
+                        <Button variant="dark" type="submit">
+                            Register
+                        </Button>
+                    </div>
+
                     <Form.Text className="text-danger">
                         {error}
                     </Form.Text>

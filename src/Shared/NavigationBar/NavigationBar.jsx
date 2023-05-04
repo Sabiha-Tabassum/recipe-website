@@ -55,7 +55,7 @@ const NavigationBar = () => {
                         <Nav>
                             {
                                 user && <div className='d-flex'>
-                                    <div className='me-2'>
+                                    <div className='me-2 mt-2'>
                                         <Image style={{ height: '40px' }} src={user.photoURL} roundedCircle />
                                     </div>
 

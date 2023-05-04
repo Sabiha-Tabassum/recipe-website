@@ -7,6 +7,7 @@ import './Recipes.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react';
+import TypewriterComponent from 'typewriter-effect';
 
 const Recipes = () => {
     const recipes = useLoaderData();
@@ -49,7 +50,13 @@ const Recipes = () => {
             </div>
 
             <div className='text-center my-5'>
-                <h2> Chef's recipes are given below</h2>
+                <TypewriterComponent options={{
+                    autoStart: true,
+                    loop: true,
+                    delay: 60,
+                    strings: ["<h2> Chef's recipes are given below</h2>"]
+                }}></TypewriterComponent>
+                
             </div>
 
             <div>
@@ -67,10 +74,10 @@ const Recipes = () => {
                         </div>
                         <div className='d-flex'>
                             <div className='flex-grow-1'>
-                                <Button onClick={handleFavouriteButton1} 
-                                 disabled={click1} variant="secondary"><FaHeart></FaHeart></Button>
+                                <Button onClick={handleFavouriteButton1}
+                                    disabled={click1} variant="secondary">Favourite <FaHeart></FaHeart></Button>
                             </div>
-                            
+
                             <div>
                                 <Rating
                                     placeholderRating={rating1}
@@ -101,8 +108,8 @@ const Recipes = () => {
                         </div>
                         <div className='d-flex'>
                             <div className='flex-grow-1'>
-                                <Button onClick={handleFavouriteButton2}  
-                                 disabled={click2} variant="secondary"><FaHeart></FaHeart></Button>
+                                <Button onClick={handleFavouriteButton2}
+                                    disabled={click2} variant="secondary">Favourite <FaHeart></FaHeart></Button>
                             </div>
                             <div>
                                 <Rating
@@ -134,8 +141,8 @@ const Recipes = () => {
                         </div>
                         <div className='d-flex'>
                             <div className='flex-grow-1'>
-                                <Button onClick={handleFavouriteButton3}  
-                                 disabled={click3} variant="secondary"><FaHeart></FaHeart></Button>
+                                <Button onClick={handleFavouriteButton3}
+                                    disabled={click3} variant="secondary">Favourite <FaHeart></FaHeart></Button>
                             </div>
                             <ToastContainer />
                             <div>

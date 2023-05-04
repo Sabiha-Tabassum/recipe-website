@@ -9,6 +9,7 @@ import ChefData from './Home/ChefData';
 
 
 
+
 const Home = () => {
     const chefData = useLoaderData();
     console.log(chefData)
@@ -32,7 +33,13 @@ const Home = () => {
 
             <section>
                 <div className='text-center my-5'>
-                    <h2>Meet With Our Talented Head Chefs</h2>
+                    <TypewriterComponent options={{
+                        autoStart: true,
+                        loop: true,
+                        delay: 60,
+                        strings: ["<h2>Meet With Our Talented Head Chefs</h2>"]
+                    }}></TypewriterComponent>
+
                 </div>
                 <div className='mt-5 chef-card'>
                     {
@@ -49,9 +56,12 @@ const Home = () => {
 
             <section>
                 <div className='text-center my-5'>
-                    <h2>
-                        Popular Item
-                    </h2>
+                    <TypewriterComponent options={{
+                        autoStart: true,
+                        loop: true,
+                        delay: 60,
+                        strings: ["<h2>Popular Item in the Town</h2>"]
+                    }}></TypewriterComponent>
                 </div>
 
                 <Carousel className='mt-4'>
@@ -113,18 +123,18 @@ const Home = () => {
 
 
             <section>
-                <div className='mt-5 mb-5 d-flex align-items-center border border-secondary-subtle'>
+                <div  className='mt-5 mb-5 d-flex align-items-center border border-secondary-subtle'>
                     <div className=''>
                         <img src="https://i.ibb.co/MVJBP3t/cook-book.jpg" />
                     </div>
                     <div className='ms-5'>
-                    <TypewriterComponent options={{
+                        <TypewriterComponent options={{
                             autoStart: true,
                             loop: true,
                             delay: 60,
                             strings: ["  <h4>Our Cook Book Will Soon be <br /> Available in Departmental Stores <br /> Accross the Country.</h4>"]
                         }}></TypewriterComponent>
-                      
+
                     </div>
                 </div>
             </section>

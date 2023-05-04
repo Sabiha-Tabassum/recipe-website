@@ -37,31 +37,31 @@ const Login = () => {
             })
     }
 
-  // sign in with popup
+    // sign in with popup
 
 
     const handleGoogleSignIn = () => {
-         popUpSignIn()
-         .then(result => {
-            const googleUser = result.user;
-            console.log(googleUser);
-         })
-         .catch(error => {
-            console.log('error', error.message)
-         })
+        popUpSignIn()
+            .then(result => {
+                const googleUser = result.user;
+                console.log(googleUser);
+            })
+            .catch(error => {
+                console.log('error', error.message)
+            })
     }
 
     // sign in with github pop up:
 
     const handleGithubeSignIn = () => {
         gitHubSignIn()
-        .then(result => {
-            const githubUser = result.user;
-            console.log(githubUser);
-         })
-         .catch(error => {
-            console.log('error', error.message)
-         })
+            .then(result => {
+                const githubUser = result.user;
+                console.log(githubUser);
+            })
+            .catch(error => {
+                console.log('error', error.message)
+            })
     }
 
     return (
@@ -78,13 +78,13 @@ const Login = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" name="password" placeholder="Password" required />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group>
-                <Button variant="dark" type="submit">
-                    Login
-                </Button>
-                <br />
+               
+                <div className='text-center'>
+                    <Button variant="dark" type="submit">
+                        Login
+                    </Button>
+                </div>
+
                 <Form.Text className="text-danger">
                     {error}
                 </Form.Text>
@@ -99,8 +99,8 @@ const Login = () => {
                     <Button onClick={handleGoogleSignIn} variant="dark" className='mb-2'> <ListGroup.Item><FaGoogle></FaGoogle> <span className='ms-4'>Goggle SignIn</span></ListGroup.Item></Button>
 
                     <Button onClick={handleGithubeSignIn} variant="dark"><ListGroup.Item><FaGithub></FaGithub> <span className='ms-4'>GitHub SignIn</span> </ListGroup.Item></Button>
-                   
-                    
+
+
                 </ListGroup>
 
 
