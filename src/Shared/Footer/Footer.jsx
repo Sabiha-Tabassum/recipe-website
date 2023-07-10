@@ -15,7 +15,7 @@ const Footer = () => {
                     <FaEye className='ms-4'></FaEye> 14
                     <FaThumbsDown className='text-white ms-4'></FaThumbsDown> 0
                 </div>
-                <div className='text-white mt-2'><small>published on April 4 2023</small></div>
+                <div className='text-white mt-2'><small>published on April 5 2023</small></div>
             </div>
         </div>
     );
