@@ -1,9 +1,19 @@
 .bg{
-    background-image: url(/src/image/chef-recipe.jpg);
+    background-image: url(/src/image/top-view-white-notepad-along-with-vegetables-seasonings-dark-desk-food-meal-vegetable-photo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
     position: relative;
+    
+}
+
+@media (max-width: 393px) {
+    .bg {
+       height: 200px;
+       
+    }
+
+   
 }
 
 .bg-text{
@@ -12,12 +22,33 @@
     left: 20px;
 }
 
+@media (max-width: 393px) {
+    .bg-text {
+        top: 100px;
+        
+    }
+
+    .p {
+        font-weight: normal;
+        font-size: 10px;
+    }
+}
+
 .title{
    
     position: absolute;
-    top: 80px;
+    top: 100px;
     left: 20px;
     
+}
+
+@media (max-width: 393px) {
+    .title{
+        top: 30px;
+        font-size: 20px;
+       
+        
+    }
 }
 
 .chef-card{
@@ -25,4 +56,44 @@
     grid-template-columns: repeat(3, 1fr);
     
 }
+
+@media (max-width: 393px) {
+    .chef-card {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 20px;
+    }
+}
+
+/* .margin{
+    margin: -10px;
+} */
+
+
+
+
+@media (max-width: 393px) {
+    .img {
+        width: 220px;
+    }
+}
+
+@media (max-width: 393px) {
+    .advertise {
+       
+    }
+
+    .addtext {
+        font-weight: bold;
+        font-size: 14px;
+    }
+}
+
+/* @media (max-width: 393px) {
+    .slide2 {
+        height: 628px;
+    }
+} */
+
+
 

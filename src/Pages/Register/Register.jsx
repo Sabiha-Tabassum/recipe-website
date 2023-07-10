@@ -60,32 +60,32 @@ const Register = () => {
 
     return (
         <div>
-            <Container className='w-25 mx-auto mb-5 mt-4 mb-4 border border-secondary-subtle'>
+            <Container className='w-50 mx-auto mb-5 mt-4 mb-4 border border-secondary-subtle'>
                 <h4>Please Register</h4>
-                <Form onSubmit={handleRegister}>
+                <Form onSubmit={handleRegister} className='mb-4'>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Name</Form.Label>
+                        <Form.Label className='fw-bold'>Name</Form.Label>
                         <Form.Control type="text" name='name' placeholder="Your name" required />
 
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Email address</Form.Label>
+                        <Form.Label className='fw-bold'>Email address</Form.Label>
                         <Form.Control type="email" name='email' placeholder="Enter email" required />
 
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Photo URL</Form.Label>
+                        <Form.Label className='fw-bold'>Photo URL</Form.Label>
                         <Form.Control type="text" name='photo' placeholder="Photo URL" required />
 
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Label>Password</Form.Label>
+                        <Form.Label className='fw-bold'>Password</Form.Label>
                         <Form.Control type="password" name="password" placeholder="Password" required />
                     </Form.Group>
                     <div className='text-center'>
-                        <Button variant="dark" type="submit">
+                        <Button variant="" className='px-5 bg-secondary text-white' type="submit">
                             Register
                         </Button>
                     </div>
@@ -94,7 +94,7 @@ const Register = () => {
                         {error}
                     </Form.Text>
                     <br />
-                    <Form.Text className="text-secondary">
+                    <Form.Text className="text-secondary fw-bold ">
                         Already have an account <Link to='/login'>Login</Link>
                     </Form.Text>
 

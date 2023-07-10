@@ -14,17 +14,12 @@ const Home = () => {
     const chefData = useLoaderData();
     console.log(chefData)
     return (
-        <Container className='mb-5 '>
-            <section>
+        <Container className=''>
+            <section className='margin'>
                 <div className='bg text-white'>
                     <h2 className='title'>Chinese Recipes <br /> For Everyone</h2>
                     <div className='bg-text'>
-                        <TypewriterComponent options={{
-                            autoStart: true,
-                            loop: true,
-                            delay: 80,
-                            strings: ["<h4 className=''>At foodies, we take food seriously then everything else. <br /> We come up with weekly recipes of  every <br /> kind of food to fulfill your cravings.</h4>"]
-                        }}></TypewriterComponent>
+                        <h4 className='p'>At foodies, we take food seriously then everything else. <br /> We come up with weekly recipes of  every <br /> kind of food to fulfill your cravings.</h4>
                     </div>
 
 
@@ -78,7 +73,7 @@ const Home = () => {
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
-                            className="d-block w-100"
+                            className="d-block w-100 "
                             src="https://i.ibb.co/3yqzy0M/food-2.jpg"
                             alt="Second slide"
                         />
@@ -123,17 +118,12 @@ const Home = () => {
 
 
             <section>
-                <div  className='mt-5 mb-5 d-flex align-items-center border border-secondary-subtle'>
+                <div  className='mt-5 mb-5 d-flex align-items-center '>
                     <div className=''>
-                        <img src="https://i.ibb.co/MVJBP3t/cook-book.jpg" />
+                        <img className='img' src="https://i.ibb.co/MVJBP3t/cook-book.jpg" />
                     </div>
-                    <div className='ms-5'>
-                        <TypewriterComponent options={{
-                            autoStart: true,
-                            loop: true,
-                            delay: 60,
-                            strings: ["  <h4>Our Cook Book Will Soon be <br /> Available in Departmental Stores <br /> Accross the Country.</h4>"]
-                        }}></TypewriterComponent>
+                    <div className='ms-5 advertise'>
+                        <h4 className='addtext'>Our Cook Book Will Soon be <br /> Available in Departmental Stores <br /> Accross the Country.</h4>
 
                     </div>
                 </div>

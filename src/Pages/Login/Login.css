@@ -1,0 +1,15 @@
+@media (max-width: 393px) {
+    .button1 {
+        font-size: 8px;
+       font-weight: bold;
+        
+    }
+}
+
+@media (max-width: 393px) {
+    .button2 {
+        font-size: 8px;
+        font-weight: bold;
+        
+    }
+}

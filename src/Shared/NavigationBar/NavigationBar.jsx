@@ -16,21 +16,23 @@ const NavigationBar = () => {
 
 
     return (
-        <Container className=' mt-2'>
+        <Container className=' mt-2 '>
 
-            <Navbar collapseOnSelect expand="lg" bg="light" variant="light" >
-                <Container className=''>
-                    <Navbar.Brand href="#home" className=''>Chinese Recipes</Navbar.Brand>
+            <Navbar collapseOnSelect expand="lg" bg="light" variant="light" className='' >
+                <Container className='navbar'>
+                    <Navbar.Brand href="#home" className='fw-bold '>Chinese Recipes</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mx-auto ">
                             <ul className='d-flex mt-5'>
-                                <p className='me-2'>
+                                <p className='me-4'>
                                     <NavLink
                                         to='/'
                                         aria-label='Home'
                                         title='Home'
-                                        className={({ isActive }) => (isActive ? 'active' : 'default')}
+                                        className={({ isActive, isPending }) =>
+                                        isPending ? "pending" : isActive ? "fw-bold" : ""
+                                    }
                                     >
                                         Home
                                     </NavLink>
@@ -40,7 +42,9 @@ const NavigationBar = () => {
                                         to='/blog'
                                         aria-label='Blog'
                                         title='Blog'
-                                        className={({ isActive }) => (isActive ? 'active' : 'default')}
+                                        className={({ isActive, isPending }) =>
+                                        isPending ? "pending" : isActive ? "fw-bold" : ""
+                                    }
                                     >
                                         Blog
                                     </NavLink>
@@ -72,7 +76,7 @@ const NavigationBar = () => {
                             {
                                 user ? <Button onClick={handleLogOut} variant="dark">LogOut</Button> :
                                     <Link to="/login">
-                                        <Button variant="dark">LogIn</Button>
+                                        <Button variant="dark" className='px-4'>LogIn</Button>
                                     </Link>
                             }
 
@@ -81,6 +85,8 @@ const NavigationBar = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+
+            
 
         </Container>
 
