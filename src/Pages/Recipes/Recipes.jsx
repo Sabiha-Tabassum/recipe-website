@@ -62,7 +62,7 @@ const Recipes = () => {
             </div>
 
             <div>
-                <Card style={{ width: '50rem' }} className='card my-4'>
+                <Card style={{ width: '25rem' }} className='card my-4'>
                     <Card.Body>
                         <Card.Title>{recipe1_name}</Card.Title>
                         <Card.Subtitle className="mb-2 text-black">Ingredients:</Card.Subtitle>
@@ -90,7 +90,7 @@ const Recipes = () => {
                     </Card.Body>
                 </Card>
 
-                <Card style={{ width: '50rem' }} className='card my-4'>
+                <Card style={{ width: '25rem' }} className='card my-4'>
                     <Card.Body>
                         <Card.Title>{recipe2_name}</Card.Title>
                         <Card.Subtitle className="mb-2 text-black">Ingredients:</Card.Subtitle>
@@ -119,7 +119,7 @@ const Recipes = () => {
                     </Card.Body>
                 </Card>
 
-                <Card style={{ width: '50rem' }} className='card my-4'>
+                <Card style={{ width: '25rem' }} className='card my-4'>
                     <Card.Body>
                         <Card.Title>{recipe3_name}</Card.Title>
                         <Card.Subtitle className="mb-2 text-black">Ingredients:</Card.Subtitle>

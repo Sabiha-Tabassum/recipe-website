@@ -14,6 +14,15 @@
     right: 280px;
 }
 
+@media (max-width: 393px) {
+    .chef-info {
+        top: 20px;
+        left: 10px;
+        right: 0px;
+
+    }
+}
+
 .chef-img{
     width: 340px;
     height: 400px;
@@ -22,6 +31,21 @@
     bottom: 0px;
 }
 
+@media (max-width: 393px) {
+    .chef-img {
+        height: 200px;
+        left: 10px;
+        
+    }
+}
+
 .card{
   background-image: url(/src/image/card\ banner.jpg);
+}
+
+@media (max-width: 393px) {
+    .card {
+        height: 400px;
+       
+    }
 }
