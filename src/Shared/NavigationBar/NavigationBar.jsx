@@ -31,8 +31,8 @@ const NavigationBar = () => {
                                         aria-label='Home'
                                         title='Home'
                                         className={({ isActive, isPending }) =>
-                                        isPending ? "pending" : isActive ? "fw-bold" : ""
-                                    }
+                                            isPending ? "pending" : isActive ? "fw-bold" : ""
+                                        }
                                     >
                                         Home
                                     </NavLink>
@@ -43,8 +43,8 @@ const NavigationBar = () => {
                                         aria-label='Blog'
                                         title='Blog'
                                         className={({ isActive, isPending }) =>
-                                        isPending ? "pending" : isActive ? "fw-bold" : ""
-                                    }
+                                            isPending ? "pending" : isActive ? "fw-bold" : ""
+                                        }
                                     >
                                         Blog
                                     </NavLink>
@@ -56,6 +56,7 @@ const NavigationBar = () => {
                             <Link to='/blog' className='mt-2 '>Blog</Link> */}
 
                         </Nav>
+
                         <Nav>
                             {
                                 user && <div className='d-flex'>
@@ -82,11 +83,12 @@ const NavigationBar = () => {
 
 
                         </Nav>
+                        
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
 
-            
+
 
         </Container>
 

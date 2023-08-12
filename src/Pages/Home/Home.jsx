@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Carousel, Container } from 'react-bootstrap';
 import { useLoaderData } from 'react-router-dom';
 import TypewriterComponent from 'typewriter-effect';
 import './Home.css';
 import ChefData from './Home/ChefData';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import Aos from 'aos';
 
 
 
@@ -13,6 +16,10 @@ import ChefData from './Home/ChefData';
 const Home = () => {
     const chefData = useLoaderData();
     console.log(chefData)
+    useEffect(()=>{
+       Aos.init({duration:2000})
+    },[])
+
     return (
         <Container className=''>
             <section className='margin'>
@@ -120,9 +127,9 @@ const Home = () => {
             <section>
                 <div  className='mt-5 mb-5 d-flex align-items-center '>
                     <div className=''>
-                        <img className='img' src="https://i.ibb.co/MVJBP3t/cook-book.jpg" />
+                        <img className='img' data-aos="zoom-in" src="https://i.ibb.co/MVJBP3t/cook-book.jpg" />
                     </div>
-                    <div className='ms-5 advertise'>
+                    <div className='ms-5 advertise' data-aos="fade-left">
                         <h4 className='addtext'>Our Cook Book Will Soon be <br /> Available in Departmental Stores <br /> Accross the Country.</h4>
 
                     </div>
