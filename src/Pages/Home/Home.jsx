@@ -69,6 +69,7 @@ const Home = () => {
                 <Carousel className='mt-4'>
                     <Carousel.Item>
                         <img
+                            style={{height:400}}
                             className="d-block w-100"
                             src="https://i.ibb.co/mXhzkYz/food-1.jpg"
                             alt="First slide"
@@ -80,7 +81,8 @@ const Home = () => {
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
-                            className="d-block w-100 "
+                            style={{height:400}}
+                            className="d-block w-100  "
                             src="https://i.ibb.co/3yqzy0M/food-2.jpg"
                             alt="Second slide"
                         />
@@ -92,6 +94,7 @@ const Home = () => {
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
+                            style={{height:400}}
                             className="d-block w-100"
                             src="https://i.ibb.co/ZN8hPHL/food-3.jpg"
                             alt="Third slide"
@@ -108,6 +111,7 @@ const Home = () => {
                     <Carousel.Item className='position-relative'>
 
                         <img
+                            style={{height:400}}
                             className="d-block w-100"
                             src="https://i.ibb.co/yWz16Bc/food-4.jpg"
                             alt="Third slide"

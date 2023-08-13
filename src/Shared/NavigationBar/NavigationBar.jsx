@@ -64,7 +64,7 @@ const NavigationBar = () => {
                                         <Image style={{ height: '40px' }} src={user.photoURL} roundedCircle />
                                     </div>
 
-                                    <div className='mt-2 me-4'>
+                                    <div className='mt-3 me-4'>
                                         <p> {user.displayName}</p>
                                     </div>
 
