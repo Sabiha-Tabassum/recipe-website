@@ -60,9 +60,9 @@ const Register = () => {
 
     return (
         <div>
-            <Container className='w-50 mx-auto mb-5 mt-4 mb-4 border border-secondary-subtle'>
+            <Container className=' mx-auto mb-5 mt-4 mb-4 ' style={{width:400}}>
                 <h4>Please Register</h4>
-                <Form onSubmit={handleRegister} className='mb-4'>
+                <Form onSubmit={handleRegister} className='mb-6 border border-secondary-subtle'>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label className='fw-bold'>Name</Form.Label>
                         <Form.Control type="text" name='name' placeholder="Your name" required />
@@ -94,7 +94,7 @@ const Register = () => {
                         {error}
                     </Form.Text>
                     <br />
-                    <Form.Text className="text-secondary fw-bold ">
+                    <Form.Text className="text-secondary fw-bold ms-2 ">
                         Already have an account <Link to='/login'>Login</Link>
                     </Form.Text>
 

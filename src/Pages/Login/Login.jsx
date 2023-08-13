@@ -66,9 +66,9 @@ const Login = () => {
     }
 
     return (
-        <Container className='mx-auto w-50 mt-4 mb-4 border border-secondary-subtle container'>
+        <Container className='mx-auto mt-4 mb-4 ' style={{width:400}}>
             <h4>Please Login</h4>
-            <Form onSubmit={handleLogin}>
+            <Form onSubmit={handleLogin} className='border border-secondary-subtle container'>
                 <Form.Group className="mb-3 form1" controlId="formBasicEmail">
                     <Form.Label className='fw-bold'>Email address</Form.Label>
                     <Form.Control type="email" name='email' placeholder="Enter email" required />
