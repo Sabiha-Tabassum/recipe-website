@@ -2,14 +2,14 @@ import React from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 
 
 const Register = () => {
 
     const { createUser, updateProfile } = useContext(AuthContext);
-
+    const navigate = useNavigate();
     const [error, setError] = useState('');
 
     const handleRegister = event => {
@@ -40,6 +40,7 @@ const Register = () => {
                 console.log(createdUser);
                 setError('');
                 event.target.reset();
+                navigate('/')
 
             })
 
